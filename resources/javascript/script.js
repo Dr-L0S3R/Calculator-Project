@@ -1,3 +1,4 @@
+console.log("Script loaded!");
 let currentInput = '';
 let previousInput = '';
 let operator = '';
@@ -8,8 +9,11 @@ function appendNumber(number) {
 }
 
 function setOperator(op) {
-  if (currentInput === '') return;
-  if (previousInput !== '') {
+  if (currentInput === '' && previousInput !== '') {
+    operator = op;
+    return;
+  }
+  if (previousInput !== '' && currentInput !== '') {
     calculateResult();
   }
   operator = op;
@@ -35,7 +39,7 @@ function calculateResult() {
       result = prev * current;
       break;
     case '/':
-      result = prev / current;
+      result = current === 0 ? 'Error' : prev / current;
       break;
     default:
       return;
