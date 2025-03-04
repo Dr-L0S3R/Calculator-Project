@@ -42,15 +42,7 @@ body {
   transition: background-color 0.3s;
 }
 
-.btn:hover {
-  background-color: #ddd;
-}
-
 .operator {
-  background-color: #ff9500;
-  color: white;
-}
-
-.operator:hover {
-  background-color: #e08900;
+  background-color: #f1f1f1;
+  color: rgb(69, 69, 69);
 }
